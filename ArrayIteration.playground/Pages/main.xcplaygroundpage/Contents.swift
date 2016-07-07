@@ -15,7 +15,7 @@
  */
 // write your code here
 
-
+var ingredients:[String] = ["Chips", "Salsa", "Guacamole", "Red wine"]
 
 
 
@@ -25,7 +25,7 @@
  */
 // write your code here
 
-
+var numbers:[Int] = [1,2,3,4,5,6,7,8,9,10]
 
 
 
@@ -36,6 +36,14 @@
  */
 // write your code here
 
+var newNumbersArray:[Int] = []
+
+for num in numbers
+{
+    newNumbersArray.append(num)
+}
+
+print(newNumbersArray)
 
 
 
@@ -48,7 +56,10 @@
 // write your code here
 
 
-
+for list in ingredients
+{
+    print ("your items: \(list)")
+}
 
 
 
@@ -56,7 +67,16 @@
 /*: question5
  ### 5. Take the list of shopping cart items you created in question 1 and print their values by passing each item in list to a function to be printed.
  */
-// write your code here
+func cart(shoppingCart: [String])
+{
+    for item in shoppingCart
+    {
+        print ("Your items: \(item)")
+    }
+    
+}
+cart(ingredients)
+
 
 
 
@@ -69,7 +89,22 @@
  */
 // write your code here
 
-
+func greetPeople(names: [String])
+{
+    for name in names
+    {
+        if(name == "Michael")
+        {
+            print("Top of the morning Michael!")
+        }
+        else
+        {
+            print("Good morning \(name)")
+        }
+        
+    }
+    
+}
 
 
 
@@ -79,9 +114,22 @@
  */
 // write your code here
 
+var numberMeh: [Int] = []
+func numberArray(numbers: [Int])->[Int]
+{
+    for num in numbers
+    {
+        if(num <= 50)
+        {
+            numberMeh.append(num)
+        }
+    }
+    return numberMeh
+}
 
+var array: [Int] = [40, 60, 50, 52, 59, 13, 90, 100, 5, 52]
 
-
+numberArray(array)
 
 
 
